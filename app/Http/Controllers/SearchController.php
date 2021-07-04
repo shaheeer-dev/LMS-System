@@ -3,19 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\AddCourse;
-use App\Meeting;
-use App\TutorRegisterCourse;
-use Auth;
-use App;
-use App\User;
-use App\TutorProfile;
-use App\AvailableTimeSlot;
-use App\FriendRequest;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
+use App\TutorRegisterCourse;
+use App\StudentRegisterCourse;
+use App\AvailableTimeSlot;
+use App\FriendRequest;
+use App\TutorProfile;
+use App\AddCourse;
+use App\Meeting;
+use Auth;
+use DB;
+use App\User;
+
 class SearchController extends Controller
 {
     
@@ -54,15 +56,18 @@ class SearchController extends Controller
         $type = AvailableTimeSlot::where('user_id', $id)->get();
         $user = FriendRequest::where('approved', '=', true);
         $course= TutorRegisterCourse::where('user_id' ,'=', $id)->get();
-        return view('student.profile.Tutor_Profile', compact('view', 'type', 'user', 'course'));
+        $meeting = Meeting::where('tutor_id', $id)->get();
+        return view('student.profile.Tutor_Profile', compact('view', 'type', 'user', 'course', 'meeting'));
     }
 
      public function student_profile($id)
 
     {
-        
         $view = User::where('id', $id)->first();
-        return view('tutor.profile.Student_Profile', compact('view'));
+        $course= StudentRegisterCourse::where('user_id' ,'=', $id)->get();
+        $meeting = Meeting::where('student_id', $id)->get();
+        
+        return view('tutor.profile.Student_Profile', compact('view', 'course', 'meeting'));
     }
 
   

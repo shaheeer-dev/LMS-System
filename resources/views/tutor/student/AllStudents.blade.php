@@ -11,9 +11,9 @@
                         <img src="/images/avatar/{{ $user_1->user1->avatar }}" alt="Profile Picture" width="50" height="50">
                        <br />
                        <h5> {{ $user_1->user1->name }}</h5>
-                       <h6> Id:  {{ $user_1->user1->id }}</h6>
+                       <h6> Id:{{ $user_1->user1->id }}</h6>
 
-                        <a href="{{route('student-profile', $user_1->user1->id)}}">View User</a>
+                        <a href="{{url('student-profile', $user_1->user1->id)}}">View User</a>
                     </div>
                 </div>
             @endforeach

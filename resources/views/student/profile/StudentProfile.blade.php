@@ -37,23 +37,25 @@
                 <h3 class="profile-username text-center">{{ Auth::user()->name }}</h3>
              
                
-                <p class="text-muted text-center">Assistant Professor</p>
+                <p class="text-muted text-center"></p>
                 
                
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Students</b> <a class="float-right">1,322</a>
+                    <b>Tutors</b> <a class="float-right">
+                      {{Auth::user()->friends->where('approved', '=', true)->count()}}</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Courses</b> <a class="float-right">543</a>
+                    <b>Courses</b> <a class="float-right">{{$course->count()}}</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Meetings</b> <a class="float-right">13,287</a>
+                    <b>Meetings</b> <a class="float-right">
+                      {{Auth::user()->meetings->where('student_id', Auth::id())->count()}}</a>
                   </li>
                 </ul>
 
-                <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                
               </div>
               <!-- /.card-body -->
             </div>
@@ -69,32 +71,31 @@
                 <strong><i class="fas fa-book mr-1"></i> Education</strong>
 
                 <p class="text-muted">
-                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                  {{ Auth::user()->education }}
                 </p>
 
                 <hr>
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
-                <p class="text-muted">Malibu, California</p>
+                <p class="text-muted">{{ Auth::user()->location }}</p>
 
                 <hr>
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Courses</strong>
 
+                
                 <p class="text-muted">
-                  <span class="tag tag-danger">UI Design</span>
-                  <span class="tag tag-success">Coding</span>
-                  <span class="tag tag-info">Javascript</span>
-                  <span class="tag tag-warning">PHP</span>
-                  <span class="tag tag-primary">Node.js</span>
+                  @foreach($course as $courses)
+                  <span class="tag tag-danger">{{$courses->course_name}} ({{$courses->class}}) <b>|</b> </span>
+                  @endforeach
                 </p>
-
+                
                 <hr>
 
-                <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+                <strong><i class="far fa-file-alt mr-1"></i> Description</strong>
 
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                <p class="text-muted">{{ Auth::user()->description }}</p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -322,47 +323,35 @@
                   </div>
                   <!-- /.tab-pane -->
 
-                  <div class="tab-pane" id="settings">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                  <div class="tab-pane p-5" id="settings" >
+                    <form class="form-horizontal" action="{{route('student-profile')}}" enctype="multipart/form-data" method="POST">
+                      @csrf
+                        <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">Profile Picture</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Name">
+                          <input type="file"  id="inputName2" name="avatar">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Education</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                          <input type="text" class="form-control" id="inputName" placeholder="Education" name="education">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Location</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                          <input type="text" class="form-control" id="inputEmail" placeholder="Lahore, Pakistan" name="location">
                         </div>
                       </div>
+                    
                       <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                        <label for="inputExperience" class="col-sm-2 col-form-label" name="notes">Description</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                          <textarea class="form-control" id="inputExperience" placeholder="Description" name="description"></textarea>
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
+     
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
                           <button type="submit" class="btn btn-danger">Submit</button>

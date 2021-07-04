@@ -10,6 +10,10 @@ class Meeting extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User'); 
+        return $this->belongsTo('App\User', 'student_id'); 
+    }
+    public function user1()
+    {
+        return $this->belongsTo('App\User', 'tutor_id'); 
     }
 }

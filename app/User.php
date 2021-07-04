@@ -48,7 +48,7 @@ protected $casts = [
 
     public function tutorcourse()
     {
-        return $this->hasMany('App\TutorRegisterCourse');
+        return $this->hasMany('App\TutorRegisterCourse', 'user_id');
     }
    public function slots()
     {
@@ -97,7 +97,12 @@ protected $casts = [
 
     public function meetings() 
     {
-        return $this->hasMany('App\Meeting');
+        return $this->hasMany('App\Meeting', 'student_id');
+    }
+
+     public function meetings1() 
+    {
+        return $this->hasMany('App\Meeting', 'tutor_id');
     }
 }
 

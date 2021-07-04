@@ -106,12 +106,13 @@ Route::get('stripe', 'paymentController@stripe')->middleware('auth');
 Route::post('stripe', 'paymentController@stripePost')->name('stripe.post')->middleware('auth');
 
 
-Route::get('tutor-profile', 'TutorProfileController@profile')->middleware('auth');
-Route::post('tutor-profile', 'TutorProfileController@update_avatar')->middleware('auth');
+Route::get('tutor-profile', 'TutorProfileController@profile')->name('tutor-profile')->middleware('auth');
+Route::post('tutor-profile', 'TutorProfileController@updat_profile')->name('tutor-profile')->middleware('auth');
 Route::get('tutor-profile', 'TutorProfileController@view_slots')->middleware('auth');
 
 /* Student Profile*/
 Route::get('student-profile/{id}', 'SearchController@student_profile')->name('student-profile')->middleware('auth');
+
 
 /*Tutor Courses Routes*/
 Route::get('register-course', 'TutorCourseController@view_add_course')->name('register-course');
@@ -166,7 +167,7 @@ Route::get('searching', 'SearchController@advance')->name('searching')->middlewa
 /*Student Profile Routes */
 
 Route::get('student-profile', 'StudentProfieController@profile')->middleware('auth');
-Route::post('student-profile', 'StudentProfieController@update_avatar')->middleware('auth');
+Route::post('student-profile', 'StudentProfieController@updat_profile')->name('student-profile')->middleware('auth');
 
 /* Get Tutor Profile*/
 Route::get('profile/{id}', 'SearchController@profile')->name('profile')->middleware('auth');
