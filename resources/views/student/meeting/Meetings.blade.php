@@ -38,8 +38,10 @@
                                 <h5 class="speaker-name">
                                     --<span style="color:black;">{{$lists->name}}</span>
                                     <span class="position">( <a href="{{$lists->link}}"target="_blank">Join Meeting</a> )</span>
+                                     <span class="position">( <a href="{{url ('checkout',$lists->id)}}"target="_blank">Make Payment</a> )</span>
                                     
                                 </h5>
+                               
                             </div>
                         </div>
                     

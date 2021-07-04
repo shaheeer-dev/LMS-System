@@ -36,7 +36,7 @@
     <li class="nav-item dropdown">
       <a class="nav-link"  href="http://localhost:8000/chat">
         <i class="far fa-comments"></i>
-        <span class="badge badge-danger navbar-badge">3</span>
+        <span class="badge badge-danger navbar-badge">{{Auth::user()->messages1->where('is_read', '=', false)->count() }}</span>
       </a>
     </li>
     
@@ -58,14 +58,14 @@
         <!-- Message Start -->
           @foreach (Auth::user()->friends1->where('approved', '=', false) as $friend1)
         <div class="dropdown-item">
-          <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center justify-content-between ">
             <div class="d-flex align-items-center">
               <div class="media">
                 <img src="/images/avatar/{{ $friend1->user1->avatar }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               </div>
               <div class="media-body">
                 <h6 class="mb-0 ">{{$friend1->user1->name}}</h6>
-                <p class="mb-0">40  friends</p>
+                <p class="mb-0"></p>
               </div>
             </div>
             <span class="">

@@ -18,14 +18,16 @@ class TutorProfileController extends Controller
  
     public function profile()
     {
-       
-        return view('tutor.profile.TutorProfile');   
+       $id = Auth::id();
+       $course= TutorRegisterCourse::where('user_id' ,'=', $id)->get();
+       $meeting = Meeting::where('tutor_id', $id)->get();
+        return view('tutor.profile.TutorProfile', compact('meeting'));   
     }
 
     public function updat_profile(Request $request){
 
         $validator = $request->validate([
-
+            'price' => 'string',
             'education' => 'string',
             'location' => 'string',
             'description' => 'string',
@@ -37,6 +39,7 @@ class TutorProfileController extends Controller
             Image::make($avatar)->resize(300, 300)->save( public_path('/images/avatar/' . $filename ) );
 
             $user = Auth::user();
+            $user->education = $request->input('price');
             $user->education = $request->input('education');
             $user->location = $request->input('location');
             $user->description = $request->input('description');

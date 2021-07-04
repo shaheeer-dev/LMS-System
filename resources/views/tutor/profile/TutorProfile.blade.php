@@ -36,7 +36,7 @@
 
                 <h3 class="profile-username text-center">{{ Auth::user()->name }}</h3>
           
-                <p class="text-muted text-center">Assistant Professor</p>
+                <h5 class="text-muted text-center">Rs.{{Auth::user()->price}}/hr</h5>
                 
                
 
@@ -351,6 +351,12 @@
                         <label for="inputName2" class="col-sm-2 col-form-label">Profile Picture</label>
                         <div class="col-sm-10">
                           <input type="file"  id="inputName2" name="avatar">
+                        </div>
+                      </div>
+                        <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Price Per Hr</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputName" placeholder="Price" name="price">
                         </div>
                       </div>
                       <div class="form-group row">

@@ -90,7 +90,7 @@ protected $casts = [
     {
       return $this->hasMany('App\Message', 'from');
     }
-        public function messages1()
+    public function messages1()
     {
       return $this->hasMany('App\Message', 'to');
     }

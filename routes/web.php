@@ -102,10 +102,6 @@ Route::get('TutorDashboard', function(){
 /*Tutor Profile Routes */
 
 
-Route::get('stripe', 'paymentController@stripe')->middleware('auth');
-Route::post('stripe', 'paymentController@stripePost')->name('stripe.post')->middleware('auth');
-
-
 Route::get('tutor-profile', 'TutorProfileController@profile')->name('tutor-profile')->middleware('auth');
 Route::post('tutor-profile', 'TutorProfileController@updat_profile')->name('tutor-profile')->middleware('auth');
 Route::get('tutor-profile', 'TutorProfileController@view_slots')->middleware('auth');
@@ -199,3 +195,8 @@ Route::get('chat', 'ChatsController@view')->name('chat')->middleware('auth');
 Route::get('/message/{id}', 'ChatsController@getMessage')->name('message');
 Route::post('message', 'ChatsController@sendMessage')->name('message');
 
+
+/* Jazz Cash payment Gateway*/
+
+Route::get('/checkout/{id}', 'CheckoutController@index')->middleware('auth');
+Route::post('/checkout','CheckoutController@DoCheckout')->name('/checkout')->middleware('auth');
