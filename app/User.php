@@ -52,7 +52,7 @@ protected $casts = [
     }
    public function slots()
     {
-        return $this->hasMany('AvailableTimeSlot::class');
+        return $this->hasMany('App\AvailableTimeSlot');
     }
 
     public function TutorProfile()
@@ -104,5 +104,17 @@ protected $casts = [
     {
         return $this->hasMany('App\Meeting', 'tutor_id');
     }
+
+      public function assignment() 
+    {
+        return $this->hasMany('App\Assignment', 'tutor_id');
+    }
+
+      public function assignment1() 
+    {
+        return $this->hasMany('App\Assignment', 'student_id');
+    }
+
+
 }
 

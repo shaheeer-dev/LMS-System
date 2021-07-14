@@ -48,7 +48,8 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Assignment's</th>
+                  <th>Assignments</th>
+                  <th>Student Name</th>
                   <th>Edit</th>
                   <th>Delete</th>
                   
@@ -57,8 +58,8 @@
                 <tbody>
                 @foreach($assignment as $details)
                   <tr>
-                    <td><a class="" href="{{URL::to('')}}/assignment-question/{{$details->id}}">{{$details->title}}</a></td>
-
+                    <td><a class="" href="">{{$details->title}}</a></td>
+                    <td>{{$details->user1->name}}</td>
                     <td class="text-center btn-group">
                       <a class="btn btn-primary" href="{{URL::to('')}}/edit-assignment/{{$details->id}}">Edit</a>
                     </td>

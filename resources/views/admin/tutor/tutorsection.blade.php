@@ -23,11 +23,16 @@
         <div class="container-fluid">
         <div class="container">
     <div class="row justify-content-center">
+         @if(session()->get('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div><br />
+                        @endif
         <div class="col-md-8">
             <div class="card card-info">
                 <div class="card-header"  style=" font-size: 20px;">{{ __('Register') }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype=”multipart/form-data”>
+                    <form method="POST" action="{{ route('add-user') }}" enctype=”multipart/form-data”>
                         @csrf
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -56,7 +61,7 @@
                             <div class="col-md-6">
                                 <select class="form-control @error('usertype') is-invalid @enderror select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;" type="usertype" name="usertype" required id="usertype">
                                     
-                                    <option value="1" >admin</option>
+                                    <!-- <option value="1" >admin</option> -->
                                     <option value="2" >Tutor</option>
                                     <option value="3" >Student</option>
                                 </select>

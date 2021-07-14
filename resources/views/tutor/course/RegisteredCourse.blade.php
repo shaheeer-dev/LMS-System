@@ -37,7 +37,7 @@
                           <i class="flaticon-more"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="{{route('delete-course', $show->id)}}"  data-toggle="modal" data-target="#modal-danger"><i class="fas fa-times text-orange-red"></i>Delete</a>
+                          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#modal-danger"><i class="fas fa-times text-orange-red"></i>Delete</a>
                         </div>
                       </div>
                     </td>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="modal-footer justify-content-between">
                           <button type="button" class="btn btn-outline-light" data-dismiss="modal">No</button>
-                          <a type="button" class="btn btn-outline-light" href="{{route('delete-course', $show->id)}}">Yes</a>
+                          <a type="button" class="btn btn-outline-light" href="{{route('tutor_delete-course', $show->id)}}">Yes</a>
                         </div>
                       </div>
                       <!-- /.modal-content -->

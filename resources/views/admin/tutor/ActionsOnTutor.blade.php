@@ -33,7 +33,7 @@
                     <td><img src="/images/avatar/{{$tutors->avatar}}" style="width:32px; height:32px; border-radius:50%"></td>
                     <td>{{$tutors->email}}</td>
                     <td  class="text-center"> <span >
-                      <span> <button type="button" class="btn btn-danger pr-3">Delete</button></span>
+                      <span> <a type="submit" href="{{url('delete-tutor', $tutors->id)}}" class="btn btn-danger pr-3">Delete</a></span>
                     </td>
                   </tr>
               @endforeach

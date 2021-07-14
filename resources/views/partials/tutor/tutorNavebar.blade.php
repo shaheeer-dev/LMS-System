@@ -14,22 +14,6 @@
   </ul>
   <!-- SEARCH FORM -->
   
-  
-  <div class="navbar-search-block">
-    <form class="form-inline">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-          <i class="fas fa-search"></i>
-          </button>
-          <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-          <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Messages Dropdown Menu -->
@@ -52,13 +36,13 @@
         </span>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <a href="#" class="dropdown-item dropdown-Header bg-success pt-3, pb-3">Enrollment Requests</a>
+        <a href="#" class="dropdown-item dropdown-Header bg-info pt-3, pb-3">Enrollment Requests</a>
         
         
         <!-- Message Start -->
           @foreach (Auth::user()->friends1->where('approved', '=', false) as $friend1)
         <div class="dropdown-item">
-          <div class="d-flex align-items-center justify-content-between ">
+          <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
               <div class="media">
                 <img src="/images/avatar/{{ $friend1->user1->avatar }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -68,9 +52,9 @@
                 <p class="mb-0"></p>
               </div>
             </div>
-            <span class="">
-              <a href="{{url('accept-request',$friend1->user1->id)}}" class="mr-3 btn btn-success rounded" data-userid="{{$friend1->user1->id}}">Confirm</a>
-              <a href="{{url('delete-request',$friend1->user1->id)}}" class="mr-3 btn btn-danger rounded">Delete</a>
+            <span class="mx-3">
+              <a href="{{url('accept-request',$friend1->user1->id)}}" class="pr-2 btn btn-success rounded" data-userid="{{$friend1->user1->id}}">Confirm</a>
+              <a href="{{url('delete-request',$friend1->user1->id)}}" class="pr-2 btn btn-danger rounded">Delete</a>
             </span>
           </div>
         </div>
@@ -89,33 +73,6 @@
       </div>
     </li>
    
-    <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">15</span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <span class="dropdown-item dropdown-header">15 Notifications</span>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-envelope mr-2"></i> 4 new messages
-          <span class="float-right text-muted text-sm">3 mins</span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-users mr-2"></i> 8 friend requests
-          <span class="float-right text-muted text-sm">12 hours</span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-file mr-2"></i> 3 new reports
-          <span class="float-right text-muted text-sm">2 days</span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-      </div>
-    </li>
     <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">
         <i class="fas fa-expand-arrows-alt"></i>

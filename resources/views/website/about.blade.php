@@ -21,16 +21,16 @@
                             <div class="row justify-content-end">
                                 <div class="col-lg-6 col-xl-5">
                                     <div class="element-image-box layout-1 style-2">
-                                        <div class="wrap-element">
+                                        <div class="">
                                             <div class="image-element">
                                                 <img src="assets/images/home/single-image-07.jpeg" alt="IMG">
                                             </div>
-                                            <div class="text-element">
+                                            <!-- <div class="text-element">
                                                 <span class="number">2</span> Year Experience
                                             </div>
                                             <div class="text-element">
                                                 <span class="number">52</span> Completed Projects
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -129,13 +129,13 @@
                                 </div>
                                 <div class="col-md-7 col-lg-4 col-image">
                                     <div class="element-image-box layout-1 style-2">
-                                        <div class="wrap-element">
+                                        <div class="">
                                             <div class="image-element">
                                                 <img src="assets/images/home/single-image-07.jpeg" alt="IMG">
                                             </div>
-                                            <div class="text-element">
+                                          <!--   <div class="text-element">
                                                 <span class="number">07</span> Awward Winner
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

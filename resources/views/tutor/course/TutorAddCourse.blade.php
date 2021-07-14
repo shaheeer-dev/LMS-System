@@ -48,11 +48,11 @@
                     <div class="card card-widget widget-user">
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <div class="widget-user-header text-white" style="background: url('{{ asset('images/Course_Thumbnail/'.$view->Thumnail) }}') center center; box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 55%);">
-                            <div class="dropdown d-flex justify-content-end">
+                          <!--   <div class="dropdown d-flex justify-content-end">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="flaticon-more text-white "></i> </a>
                                 <div class="dropdown-menu dropdown-menu-right"> <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a> <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a> <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a> </div>
                                 
-                            </div>
+                            </div> -->
                             <h5 class="widget-user-desc" id="add_course_desc" >{{$view->Course_Name}}</h5> </div>
 
                         <div class="card-footer" id="add_course_footer">
@@ -82,16 +82,38 @@
                             <div class="row d-flex justify-content-center">
                                 <p class="card-text text-center">{{$view->Description}}</p>
                             </div>
+
+                            
+                            <?php  $count = 0 ?>
+                            @foreach($tutor_course as $course)
+                            @if($course->course_id == $view->id)
+                            <?php  $count = 1 ?>
+                            @endif
+                            @endforeach
+                            
+                            @if( $count == 1)
                             <div class="row d-flex justify-content-center pt-5">
-                                <button type="submit" class="btn btn-success toastrDefaultSuccess" >Register</button>
+                                <a href="#" class="btn btn-success" >Enrolled</a>
                         
                                 
                             </div>
+                            
+                            @else
+
+                            <div class="row d-flex justify-content-center pt-5">
+                                <button type="submit" class="btn btn-warning toastrDefaultSuccess" >Register</button>
+                        
+                                
+                            </div>
+                            @endif
+                            
                         </div>
                     </div>
                     </form>
                     <!-- /.widget-user -->
                 </div> @endforeach </div>
+
+
             <!-- /.row -->
         </div>
         <!-- /.container-fluid -->

@@ -112,11 +112,11 @@
 							<div class="menu-useful-links-container">
 								<ul class="menu">
 									<li class="menu-item">
-										<a href="javascript:void(0)">Login</a>
+										<a href="/login">Login</a>
 									</li>
 
 									<li class="menu-item">
-										<a href="javascript:void(0)">Registration</a>
+										<a href="/register">Registration</a>
 									</li>
 
 									<li class="menu-item">
@@ -135,7 +135,7 @@
 						</aside>
 					</div>
 
-					<div class="col-sm-6 col-md-6 col-xl col-footer">	
+					<!-- <div class="col-sm-6 col-md-6 col-xl col-footer">	
 						<aside class="widget widget_nav_menu">
 							<h3 class="widget-title">
 								Info For
@@ -165,14 +165,14 @@
 								</ul>
 							</div>
 						</aside>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 
 		<div class="copyright-area">
 			<div class="container">
-				<div class="social-links text-center">
+				<!-- <div class="social-links text-center">
 					<ul class="socials">
 						<li>
 							<a href="javascript:void(0)">
@@ -204,10 +204,10 @@
 							</a>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 
 				<div class="copyright-text">
-					Copyright 2021 Corporate TUTOR-ONLINE By <a href="mailto:arsalanahmad8001@gmail.com" target="_blank">Arsalan Ahmad</a>
+					Copyright 2021 Corporate <a href="mailto:arsalanahmad8001@gmail.com" target="_blank">TUTOR-ONLINE</a>
 				</div>
 			</div>
 		</div>

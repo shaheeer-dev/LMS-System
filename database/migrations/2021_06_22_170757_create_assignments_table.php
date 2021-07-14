@@ -20,9 +20,6 @@ class CreateAssignmentsTable extends Migration
             $table->string('title');
             $table->string('guidelines');
             $table->dateTime('starts_at');
-            $table->dateTime('ends_at');
-            $table->string('passing_marks');
-            $table->string('total_marks');
             $table->string('cover_img')->default('default.jpg');
             $table->timestamps();
         });

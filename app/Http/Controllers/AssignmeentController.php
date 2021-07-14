@@ -15,6 +15,16 @@ use Image;
 class AssignmeentController extends Controller
 {
 
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function ViewAssignment($id)
 
     {
@@ -31,10 +41,7 @@ class AssignmeentController extends Controller
         'student_id' => 'required',    
         'title' => 'required', 
          'guidelines' => 'required|max:100000',  
-         'passing_marks' => 'required', 
-         'total_marks' => 'required',
          'starts_at' => 'required|date',
-         'ends_at' => 'required|date', 
          'cover_img' => 'mimes:pdf|required',
 
         ]);
@@ -77,7 +84,7 @@ class AssignmeentController extends Controller
     public function edit_assignment($id)
 
     {
-        $edit =Assignment::findOrfail($id);
+        $edit =Assignment::findOrfail($id)->first();
         $user = User::find($id);
         return view('tutor.assignments.UpdateAssignment',compact('edit', 'user'));
     }
@@ -91,10 +98,7 @@ class AssignmeentController extends Controller
         'student_id' => 'required',    
         'title' => 'required', 
          'guidelines' => 'required|max:100000',  
-         'passing_marks' => 'required', 
-         'total_marks' => 'required',
-         'starts_at' => 'required|date',
-         'ends_at' => 'required|date', 
+         'starts_at' => 'required|date',  
          'cover_img' => 'mimes:pdf|required',
 
         ]);

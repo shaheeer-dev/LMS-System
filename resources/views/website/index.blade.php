@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-slick">
+                        <!-- <div class="item-slick">
                             <div class="content-slider">
                                 <div class="column-slider">
                                     <div class="img-slider">
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="navi-slider">
                         <div class="container">
@@ -170,7 +170,7 @@
                                 <div class="counter-box">
                                     <div class="number">
                                         <span class="number_counter">
-                                            <span class="counter">120</span>+
+                                            <span class="">120</span>+
                                         </span>
                                     </div>
                                     <h4 class="title">
@@ -198,7 +198,7 @@
                                 <div class="counter-box">
                                     <div class="number">
                                         <span class="number_counter">
-                                            <span class="counter">50</span>+
+                                            <span class="">50</span>+
                                         </span>
                                     </div>
                                     <h4 class="title">
@@ -228,7 +228,7 @@
                                 <div class="counter-box">
                                     <div class="number">
                                         <span class="number_counter">
-                                            <span class="counter">540</span>+
+                                            <span class="">540</span>+
                                         </span>
                                     </div>
                                     <h4 class="title">
@@ -454,7 +454,7 @@
     </div>
     <!-- end tutor -->
     <!-- testimonial -->
-    <div class="sec-testimonial-02" style="background-image: url('assets/images/home/Privacy-Policy.jpg');">
+    <!-- <div class="sec-testimonial-02" style="background-image: url('assets/images/home/Privacy-Policy.jpg');">
         <div class="container">
             <div class="element-testimonial layout-2">
                 <div class="slide-testimonial js-call-slick-testimonial" data-autoscroll="0" data-speedauto="5000" data-fadeslide="0">
@@ -555,7 +555,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end testimonial -->
     <!-- courses -->
     <div class="sec-courses-03" style="background-image: url(assets/images/home/bg-png-08.png);">
@@ -758,7 +758,7 @@
                     </div>
                     <div class="element-button layout-1 align-left">
                         <a href="/contact" class="button">
-                            Book star tutor
+                            Book tutor
                         </a>
                     </div>
                 </div>
@@ -770,7 +770,7 @@
     </div>
     <!-- end about -->
     <!-- subscribe -->
-    <div class="sec-subscribe-01" style="background-image: url('assets/images/home/bg-png-11.png');">
+    <!-- <div class="sec-subscribe-01" style="background-image: url('assets/images/home/bg-png-11.png');">
         <div class="container">
             <div class="heading-sec">
                 <h3 class="title">
@@ -791,7 +791,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end subscribe -->
 </div>
 <!-- end Main content -->

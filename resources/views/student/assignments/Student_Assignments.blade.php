@@ -49,8 +49,8 @@
                 <thead>
                 <tr>
                   <th>Assignment Title</th>
-                  <th>Guidelines</th>
-                  <th>Due Date</th>
+                  <th>Tutor Name</th>
+                  <th></th>
                   
                 </tr>
                 </thead>
@@ -58,8 +58,9 @@
                 @foreach($assignment as $details)
                   <tr>
                     <td> <a href="{{route('assignment-details', $details->id)}}">{{$details->title}}</a></td>
-                    <td>{{$details->guidelines}}</td>
-                    <td>{{$details->ends_at}}</td>
+                    
+                    <td>{{$details->user->name}}</td>
+                    
                   </tr>
                 @endforeach
                 

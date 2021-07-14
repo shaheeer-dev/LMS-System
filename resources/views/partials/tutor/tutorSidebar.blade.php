@@ -1,7 +1,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="TutorDashboard" class="brand-link">
+    <a href="http://localhost:8000/TutorDashboard" class="brand-link">
       <img src="http://localhost:8000/dist/img/logo-tutor-online.png" alt="TutorOnline Logo" class="brand-image" style="opacity: 1">
       <span class="brand-text font-weight-light">Tutor Online</span>
     </a>

@@ -40,7 +40,7 @@
                                                     <img src="assets/images/tutors/ava-author-001.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $20.00
+                                                    Rs.2000.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -80,7 +80,7 @@
                                                     <img src="assets/images/tutors/ava-author-002.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $20.00
+                                                    Rs.2000.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -120,7 +120,7 @@
                                                     <img src="assets/images/tutors/ava-author-003.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $19.00
+                                                    Rs.1900.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -160,7 +160,7 @@
                                                     <img src="assets/images/tutors/ava-author-004.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $19.00
+                                                    Rs.1900.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -200,7 +200,7 @@
                                                     <img src="assets/images/tutors/ava-author-005.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $18.00
+                                                    Rs.1800.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -240,7 +240,7 @@
                                                     <img src="assets/images/tutors/ava-author-006.jpg" alt="IMG">
                                                 </a>
                                                 <div class="price-course">
-                                                    $17.00
+                                                    Rs.1700.
                                                 </div>
                                             </div>
                                             <div class="text-course">
@@ -454,22 +454,7 @@
                                 </div>
                             </div>
                         </aside>
-                        <aside class="widget widget_info">
-                            <div class="content-info">
-                                <h5 class="title-block">
-                                    Free Call
-                                </h5>
-                                <div class="description-block">
-                                    Pulvinar est metro ligula blandit maecenas
-                                </div>
-                                <div class="content-block">
-                                    +92-324-8678001
-                                </div>
-                                <a href="co/ntact" class="button-block">
-                                    Contact us
-                                </a>
-                            </div>
-                        </aside>
+                        
                     </div>
                 </div>
             </div>

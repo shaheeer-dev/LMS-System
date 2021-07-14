@@ -13,6 +13,6 @@
 </div>
 <div class="card-footer">
   <div class="input-group input-text">
-    <input type="text" name="message" placeholder="Type Message ..." class="form-control submit">
+    <input type="text" name="message" placeholder="Type Message ..." class="form-control submit" id=input>
   </div>
 </div>

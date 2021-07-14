@@ -347,7 +347,7 @@
                                             </a>
                                         </h4>
                                         <div class="price-course">
-                                            $69.00
+                                            Rs.69.00
                                         </div>
                                         <div class="foot-item">
                                             <div class="info-course">
@@ -372,7 +372,7 @@
                                             </a>
                                         </h4>
                                         <div class="price-course">
-                                            Free
+                                            Rs.200
                                         </div>
                                         <div class="foot-item">
                                             <div class="info-course">
@@ -397,7 +397,7 @@
                                             </a>
                                         </h4>
                                         <div class="price-course">
-                                            $55.00
+                                            Rs.55.00
                                         </div>
                                         <div class="foot-item">
                                             <div class="info-course">
@@ -422,7 +422,7 @@
                                             </a>
                                         </h4>
                                         <div class="price-course">
-                                            $999.00
+                                            Rs.999.00
                                         </div>
                                         <div class="foot-item">
                                             <div class="info-course">
@@ -436,22 +436,7 @@
                                 </div>
                             </div>
                         </aside>
-                        <aside class="widget widget_info">
-                            <div class="content-info">
-                                <h5 class="title-block">
-                                    Free Call
-                                </h5>
-                                <div class="description-block">
-                                    Pulvinar est metro ligula blandit maecenas
-                                </div>
-                                <div class="content-block">
-                                    +92-324-8678001
-                                </div>
-                                <a href="/contact" class="button-block">
-                                    Contact us
-                                </a>
-                            </div>
-                        </aside>
+                        
                     </div>
                 </div>
             </div>

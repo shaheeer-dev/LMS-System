@@ -41,14 +41,20 @@
 									Contact
 								</a>
 							</li>
+
+							<li>
+								<a href="/login">
+									Login/Register
+								</a>
+							</li>
 						</ul>
 					</nav>
 
 					<div class="menu-right">
 						<div class="element-search layout-1">
-							<div class="search-button"></div>
+							<!-- <div class="search-button"></div> -->
 
-							<div class="search-form">
+							<!-- <div class="search-form">
 								<span class="close-form"></span>
 
 								<form role="search" method="get" class="form-search" >
@@ -58,13 +64,13 @@
 
 								<ul class="list-search list-unstyled">
 								</ul>
-							</div>
+							</div> -->
 						</div>
 
 						<!-- shortcode login popup -->
 						<div class="element-login-popup layout-1">
 							<div class="login-links">
-								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+								<!-- <a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a> -->
 							</div>
 
 							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
@@ -77,8 +83,8 @@
 											<h3 class="title">
 												<span class="current-title">Register</span>
 												<span>
-															<a href="#login" class="display-box" data-display=".box-login">Login</a>
-														</span>
+															<!-- <a href="#login" class="display-box" data-display=".box-login">Login</a>
+														</span> -->
 											</h3>
 
 											<div class="form-row">
@@ -113,12 +119,12 @@
 
 									<!-- form login -->
 									<div class="login-popup box-login">
-										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+										<!-- <div class="media-content" style="background-image: url(assets/images/login.jpg);"></div> -->
 
 										<div class="inner-login">
 											<h3 class="title">
 														<span>
-															<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+															<!-- <a href="#register" class="display-box" data-display=".box-register">Registration</a> -->
 														</span>
 
 												<span class="current-title">Login</span>
@@ -257,6 +263,12 @@
 			<li>
 				<a href="/contact">
 					Contact
+				</a>
+			</li>
+
+			<li>
+				<a href="/login">
+					Login/Register
 				</a>
 			</li>
 

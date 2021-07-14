@@ -84,7 +84,7 @@
               <li class="nav-item">
                 <a href="http://localhost:8000/searching" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Search Tutor</p>
+                  <p>All Tutor</p>
                 </a>
               </li>
               
@@ -94,12 +94,7 @@
                   <p>Your Tutors</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="all-meetings" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tutor Details</p>
-                </a>
-              </li>
+            
             
             </ul>
 

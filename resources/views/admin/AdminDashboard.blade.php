@@ -82,7 +82,9 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">All Members</span>
+              
                 <span class="info-box-number">{{Auth::user()->count()}}</span>
+
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -123,7 +125,10 @@
                     </tr>
                     </thead>
                     <tbody>
+                      <?php $count = 0 ; ?>
                       @foreach( $users as $user)
+                      @if($user->usertype !=1)
+                      <?php if( $count == 10 ) break; ?>
                     <tr>
                       <td>{{$user->id}}</td>
                       <td>{{$user->name}}</td>
@@ -138,6 +143,8 @@
                       <td><span class="badge badge-warning">Student</span></td>
                       @endif
                     </tr>
+                    <?php $count++; ?>
+                    @endif
                     @endforeach
                     </tbody>
                   </table>
@@ -175,20 +182,23 @@
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <ul class="products-list product-list-in-card pl-2 pr-2">
+                  <?php $count = 0 ; ?>
                   @foreach($course as $courses)
+                  <?php if( $count == 10 ) break; ?>
                   <li class="item">
                     <div class="product-img">
                       <img src="/images/Course_Thumbnail/{{$courses->Thumnail}}" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">{{$courses->Course_Name}}
-                        <span class="badge badge-warning float-right">$1800</span></a>
+                        <span class="badge badge-warning float-right">{{$courses->Class}}</span></a>
                       
                       <span class="product-description">
                         {{$courses->Description}}
                       </span>
                     </div>
                   </li>
+                  <?php $count++; ?>
                   @endforeach
                   <!-- /.item -->
                 </ul>

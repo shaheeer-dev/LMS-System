@@ -12,6 +12,16 @@ use Image;
 use App\User;
 class TutorProfileController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     
 
 	/*Functions for Tutor Avatar*/
@@ -47,7 +57,7 @@ class TutorProfileController extends Controller
             $user->save();
         }
 
-        return redirect()->back();
+        return redirect('tutor-profile');
 
     }
 

@@ -52,7 +52,7 @@
 								<!-- time Picker -->
 								<div class="bootstrap-timepicker">
 									<div class="form-group">
-										<label>Time picker:</label>
+										<label>Time:</label>
 										<div class="input-group date" id="timepicker" data-target-input="nearest">
 											<input type="timepicker" class="form-control datetimepicker-input" data-target="#timepicker" name="time" />
 											<div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
@@ -81,7 +81,7 @@
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped text-center">
+							<table  class="table table-bordered table-striped text-center">
 								<thead>
 									<tr class="text-center">
 										<th>Id</th>

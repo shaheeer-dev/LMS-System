@@ -35,45 +35,41 @@
                     <td>{{$course->Book_Name}}</td>
                     <td>{{$course->Description}}</td>
                     <td><img src="{{ asset('images/Course_Thumbnail/'.$course->Thumnail) }}" width="50"></td>
-
                     <td>
-                      <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                          <i class="flaticon-more"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="{{route('DeleteCourse', $course->id)}}"><i class="fas fa-times text-orange-red"></i>Delete</a>
-                          <a class="dropdown-item" href="{{route('EditCourse', $course->id)}}"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                          
-                        </div>
+                      
+                      <div class="">
+                        <a class="btn btn-danger" href="{{route('DeleteCourse', $course->id)}}">Delete</a>
+                        <a class="btn btn-info" href="{{route('EditCourse', $course->id)}}"></i>Edit</a>
+                        
                       </div>
-                    </td>
-                    
-                  </tr>
-                  @endforeach
-                </tbody>
-                <!-- <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                    </div>
+                  </td>
+                  
                 </tr>
-                </tfoot> -->
-              </table>
-            </div>
-            <!-- /.card-body -->
+                @endforeach
+              </tbody>
+              <!-- <tfoot>
+              <tr>
+                <th>Rendering engine</th>
+                <th>Browser</th>
+                <th>Platform(s)</th>
+                <th>Engine version</th>
+                <th>CSS grade</th>
+              </tr>
+              </tfoot> -->
+            </table>
           </div>
-          <!-- /.card -->
+          <!-- /.card-body -->
         </div>
-        <!-- /.col -->
+        <!-- /.card -->
       </div>
-      <!-- /.row -->
+      <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
-  </section>
-  <!-- /.content -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 @endsection

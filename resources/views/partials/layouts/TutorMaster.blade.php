@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="http://localhost:8000/plugins/dropzone/min/dropzone.min.css">
 
        
-              <style>
+    <style>
         /* width */
         ::-webkit-scrollbar {
             width: 7px;
@@ -166,7 +166,7 @@
             background: #eeeeee;
         }
 
-        input[type=text] {
+        #input {
             width: 100%;
             padding: 12px 20px;
             margin: 15px 0 0 0;
@@ -177,7 +177,7 @@
             border: 1px solid #cccccc;
         }
 
-        input[type=text]:focus {
+        #input:focus {
             border: 1px solid #aaaaaa;
         }
     </style>

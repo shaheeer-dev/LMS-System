@@ -12,6 +12,15 @@ use App\User;
 
 class StudentProfieController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     /*Functions for Tutor Avatar*/
     public function profile()
@@ -44,7 +53,7 @@ class StudentProfieController extends Controller
             $user->save();
         }
 
-        return redirect()->back();
+        return redirect('student-profile');
 
     }
 

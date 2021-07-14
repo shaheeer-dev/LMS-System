@@ -6,11 +6,19 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Meeting;
-use App\StudentRegisterCourse;
 use App\Assignment;
 use DB;
 class StudentDashboardController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     public function view()
     {

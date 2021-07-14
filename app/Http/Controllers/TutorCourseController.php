@@ -10,12 +10,24 @@ use Auth;
 
 class TutorCourseController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
        /*Tutor Courses Function*/
 
       public function view_add_course()
     {
+        $user_id = Auth::id();
         $view = AddCourse::all();
-        return view('tutor.course.TutorAddCourse', compact('view'));
+        $tutor_course= TutorRegisterCourse::where('user_id' ,'=', $user_id)->get();
+        return view('tutor.course.TutorAddCourse', compact('view', 'tutor_course'));
     }
 
     public function register_course(Request $request , $id)
@@ -41,7 +53,7 @@ class TutorCourseController extends Controller
 
     {
         $user_id = Auth::id();
-        $view= TutorRegisterCourse::all()->where('user_id' ,'=', $user_id)->count();
+        $view= TutorRegisterCourse::where('user_id' ,'=', $user_id)->get();
         return view('tutor.course.RegisteredCourse', compact('view'));
 
     }
@@ -51,6 +63,7 @@ class TutorCourseController extends Controller
     {
         $course = TutorRegisterCourse::findOrfail($id);
         $course->delete();
-        return redirect('registered-courses');
+        return redirect()->back();
     }
+
 }

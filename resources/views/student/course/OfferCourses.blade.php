@@ -86,13 +86,30 @@
                           
                             
                          
+                           <?php  $count = 0 ?>
+                            @foreach($std as $course)
+                            @if($course->course_id == $view->id)
+                            <?php  $count = 1 ?>
+                            @endif
+                            @endforeach
+                            
+                            @if( $count == 1)
                             <div class="row d-flex justify-content-center pt-5">
-                                <button type="submit" class="btn btn-success toastrDefaultSuccess" > Register</button>
+                                <a href="#" class="btn btn-success" >Enrolled</a>
+                        
+                                
                             </div>
+                            
+                            @else
+
+                            <div class="row d-flex justify-content-center pt-5">
+                                <button type="submit" class="btn btn-warning toastrDefaultSuccess" >Register</button>
                            
                         </div>
+                        @endif
                     </div>
                     </form>
+                </div>
                     <!-- /.widget-user -->
                 </div> @endforeach </div>
 

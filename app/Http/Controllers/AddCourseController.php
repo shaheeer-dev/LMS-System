@@ -8,6 +8,16 @@ use  Auth;
 use App\User;
 class AddCourseController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function view_add_course()
     {
         return view('admin.tutor.course.AddCourse');
@@ -75,7 +85,7 @@ class AddCourseController extends Controller
     		'Course_Name' =>'required',
     		'Book_Name' => 'required',
     		'Description' => 'required | max:100',
-    		'Thumnail' => 'file|required|mimes:jpeg,png|max:1014' ,
+    		'Thumnail' => 'file|mimes:jpeg,png|max:1014' ,
         ]);
 
         if ($validator->fails()) {
@@ -105,7 +115,7 @@ class AddCourseController extends Controller
     	$view = AddCourse:: findOrfail($id);
     	$view->delete();
 
-    	return redirect('ViewAllCourse')->with('success', 'Course is successfully saved');
+    	return redirect('ViewAllCourse')->with('success', 'Course is successfully delete');
     }
 
 }

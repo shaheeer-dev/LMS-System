@@ -50,8 +50,8 @@
 									<div class="form-group">
 										<label>Student</label>
 										<select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;" name="student_id" type="text">
-											<option>Select Id</option> @foreach ($user->friends1 as $user_1)
-											<option>{{ $user_1->user1->id }}</option> @endforeach </select>
+											<option>Select Student</option> @foreach ($user->friends1 as $user_1)
+											<option value="{{ $user_1->user1->id }}">{{ $user_1->user1->name }} </option> @endforeach </select>
 										</div>
 									</div>
 									<div class="col-md-3">

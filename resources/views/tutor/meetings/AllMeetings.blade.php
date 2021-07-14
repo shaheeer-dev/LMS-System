@@ -13,7 +13,7 @@
             <div class="col-lg-4 meeting-tab">
                 @foreach($list as $lists)
                 <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-                       <a class="nav-link" data-toggle="pill" href="#v-{{$lists->id}}" role="tab" aria-controls="v-{{$lists->id}}" aria-selected="false">
+                       <a class="nav-link " data-toggle="pill" href="#v-{{$lists->id}}" role="tab" aria-controls="v-{{$lists->id}}" aria-selected="false">
                         {{$lists->subject}}
                         <div>{{$lists->date}}</div>
                     </a>

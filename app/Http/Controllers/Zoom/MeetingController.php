@@ -12,6 +12,15 @@ use App\User;
 use DB;
 class MeetingController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
 
     public function view($id)

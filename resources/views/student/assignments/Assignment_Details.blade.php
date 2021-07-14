@@ -39,8 +39,10 @@
                                         <td> 
                                             <div class="d-flex justify-content-between">
                                                 <div class="">
-                                                    <a target="_blank" href="#">
-                                                    <img class="" src="/images/assignment_images/{{$view->cover_img}} ">
+                                                    <i class="fas fa-file-pdf"></i>
+                                                    <a  href="/images/assignment_images/{{$view->cover_img}}">
+                                                        
+                                                    
                                                     {{$view->cover_img}}</a>
                                                 </div>
                                                 <div class=""><b>Upload Time: {{$view->starts_at}}</b></div>
@@ -52,54 +54,27 @@
                                 </tbody>
                             </table>
                             <div class="submissionstatustable">
-                                <h3>Submission status</h3>
+                                <h3>Assignment Details</h3>
                                 <div class="box py-3 boxaligncenter submissionsummarytable">
                                     <table class="table table-bordered table-striped">
                                         <tbody>
                                              @foreach($assignment as $view)
+
+                                              <tr class="">
+                                                <th  class="cell c0" style="" scope="row">Title</th>
+                                                <td>{{$view->title}}</td>
+                                            </tr>
                                             <tr class="">
                                                 <th  class="cell c0" style="" scope="row">Guidelines</th>
                                                 <td>{{$view->guidelines}}</td>
                                             </tr>
-                                            <tr class="">
-                                                <th  class="cell c0" style="" scope="row">Due Date</th>
-                                                <td >{{$view->ends_at}}</td>
+                                           <tr class="">
+                                                <th  class="cell c0" style="" scope="row">Tutor Name</th>
+                                                
+                                                <td>{{$view->user->name}}</td>
                                             </tr>
-                                            <tr>
-                                                <th  class="cell c0" style="" scope="row">Passing Marks</th>
-                                                <td >{{$view->passing_marks}}</td>
-                                            </tr>
-                                            <tr class="">
-                                                <th  class="cell c0" style="" scope="row">Passing Marks</th>
-                                                <td >{{$view->total_marks}}</td>
-                                            </tr>
-
-                                            <tr>
-                                                <th>Submit your assignment (only pdf)</th>
-                                                <td>
-                                                    
-                                                    <form action="#" method="POST" enctype="multipart/form-data"> 
-                                                        @csrf
-                                                        
-                                                           <div class="form-group">
-                                                        <label for="exampleInputFile">Select file for this assignment</label>
-                                                        <div class="input-group">
-                                                            <div class="col-md-8 col-12 col-sm-6">
-                                                                <input type="file" name="cover_img" id="fileToUpload" >
-
-                                                            </div>
-
-                                                            <div class="col-md-4 col-12 col-sm-6">
-                                                                 <button type="submit" name="submit" class="btn btn-success form-control">Save</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            <!-- Sent Course Id End -->
                                           
-                                                    </form>
 
-                                                </td>
-                                            </tr>
                                             @endforeach
                                         </tbody>
                                     </table>

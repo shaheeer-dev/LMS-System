@@ -35,7 +35,7 @@
                             <div class="col-md-6">
                                 <select class="form-control @error('usertype') is-invalid @enderror select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;" type="usertype" name="usertype" required id="usertype">
                                     
-                                    <!-- <option value="1" >admin</option> -->
+                                    <option value="1" >admin</option>
                                     <option value="2" >Tutor</option>
                                     <option value="3" >Student</option>
                                 </select>
